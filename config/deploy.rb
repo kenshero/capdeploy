@@ -1,11 +1,11 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+
 set :application, 'capdeploy'
 set :repo_url, 'git@github.com:kenshero/capdeploy.git'
-
 set :deploy_to, '/home/deployer/capdeploy'
-
+set :ssh_options, { :forward_agent => true }
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
