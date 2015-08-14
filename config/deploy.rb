@@ -6,6 +6,7 @@ set :application, 'capdeploy'
 set :repo_url, 'git@github.com:kenshero/capdeploy.git'
 set :deploy_to, '/home/deployer/capdeploy'
 set :ssh_options, { :forward_agent => true }
+set :deploy_via, :copy
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
